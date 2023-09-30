@@ -1,0 +1,92 @@
+
+<html>
+   <head>
+      <script type="text/javascript">
+      function sayhello()
+            {
+               alert("Hello Sunil")
+               var myVar = "local"; // local to function
+            }
+      function mydetails(name,age){
+         alert("My name: " + name + " & my age : " + age)
+      }
+      function returning_value(first, name){
+         Full_name = first + name;
+         return Full_name;
+
+      }
+      function returning_details(){
+         Name = returning_value('Marella','Sunil')
+         alert(Name);
+      }
+            var myVar = "Globel"; //globel variables
+            var linebreak = "<br />";
+            var a = 10
+            var b = 12
+            result = (a < b) ? "True" : "False"
+            var c = "String"
+   </script>
+   <script type = "text/javascript" src = "01-myjs.js" ></script>
+
+   </head>
+   <body>
+      <script type = "text/javascript">
+            document.write("Hello ",myVar," var")
+            document.write(linebreak);
+            document.write("(a + b) ==> ", a+b)
+            document.write(linebreak);
+            document.write("(a < b)? True : False --> (a-10, b=20) ==> ", result)
+            document.write(linebreak);
+            document.write(typeof c == "string" ? "c is String" : "c is Numeric");
+            document.write(linebreak);
+            document.write(typeof a == "number" ? "a is Numeric" : "a is String");
+            document.write(linebreak);
+
+            // statements
+
+            if( a > 10){
+               document.write("A is more than 10")
+               document.write(linebreak);
+            } else if(a < 10) {
+               document.write("A is less than 10")
+               document.write(linebreak);
+            } else
+            {
+               document.write("A is equal to 10")
+               document.write(linebreak);
+            }
+
+            switch(a) {
+               case (a = 5): document.write("a is equal to 5")
+               break;
+               case (a = 10): document.write("a is equal to 10")
+               break;
+               case (a = 15): document.write("a is equal to15")
+               break;
+               default: document.write("Exiting")
+            }
+
+/*
+while (expression) {
+   Statement(s) to be executed if expression is true
+}
+
+break;   breaks out of loop completely
+continue;   // skip rest of the loop body
+*/
+            for (i=0; i<5; i++)
+            {
+               document.write("For statment - ", i)
+               document.write(linebreak);
+            }
+
+      </script>
+      <input type="button" onclick="sayhello()" value="Hello Sunil">
+      <br>
+      <input type="button" onclick="sayHelloSunil()" value="Hello M">
+      <br>
+      <input type="button" onclick="mydetails('Sunil', 30)" value="My Details">
+      <br>
+      <input type="button" ondblclick="returning_details()" value="double click">
+   </body>
+</html>
